@@ -1,9 +1,12 @@
 /* Style for navbar */
 .navbar {
-    background-color: #f8f9fa;
+    position: fixed;
+    top: 0;
+    width: 100%;
     border-bottom: 1px solid #dee2e6;
+    background-color: #f8f9fa;
+    z-index: 99;
 }
-
 .navbar-brand {
     font-size: 1.5rem;
     font-weight: bold;
@@ -14,12 +17,10 @@
     border: none;
 }
 
-/* Style for logout button */
 .nav-item button {
     margin-right: 10px;
 }
 
-/* Style for create task button */
 .fixed-bottom {
     position: fixed;
     bottom: 20px;

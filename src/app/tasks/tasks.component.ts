@@ -27,7 +27,6 @@ export class TasksComponent {
         console.log(response);
         if (response.status === 200) {
           this.taskArray = this.taskArray.filter((task) => task._id !== id);
-          // location.reload(); // Reload the current route
         } else {
           alert('Error deleting task');
         }
@@ -36,7 +35,6 @@ export class TasksComponent {
   }
 
   onEdit(id: string, completed: boolean) {
-    // Redirect to EditTaskComponent with the id of the task to be edited
     this.router.navigate(['/edit-task', id, completed]);
   }
 

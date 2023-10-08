@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ApiService } from '../api.service'; // Replace with your API service import
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-signin',
@@ -15,10 +15,8 @@ export class SignupComponent implements OnInit {
   constructor(private router: Router, private apiService: ApiService) {}
 
   ngOnInit() {
-    // Check if token is present in local storage
     const token = localStorage.getItem('token');
     if (token) {
-      // Redirect to /home
       this.router.navigate(['/home']);
     }
   }
@@ -30,27 +28,22 @@ export class SignupComponent implements OnInit {
     console.log('Password:', this.password);
     console.log('Name:', this.name);
     console.log('Phone:', this.phone);
-    // Make the API call to your backend for authentication
     this.apiService
       .signUp(this.name, this.phone, this.email, this.password)
       .subscribe(
         (response: any) => {
           console.log('API response:', response);
           if (response.status === 'SUCCESS') {
-            // Save token, refreshToken, and user in local storage
             localStorage.setItem('token', response.data.token);
             localStorage.setItem('refreshToken', response.data.refreshToken);
             localStorage.setItem('user', JSON.stringify(response.data.user));
 
-            // Route to /home
             this.router.navigate(['/home']);
           } else {
-            // Handle authentication error here
             console.error('Authentication failed.');
           }
         },
         (error: any) => {
-          // Handle API error here
           alert(error.error.message);
           console.error('API error:', error);
         }
