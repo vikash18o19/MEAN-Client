@@ -1,10 +1,10 @@
-<div class="task-container" *ngIf="taskArray.length > 0">
-  <div class="task-content" *ngFor="let task of taskArray">
+<div class="task-container" *ngFor="let task of taskArray">
+  <div class="task-content">
     <h3 class="task-title">{{ task.title }}</h3>
     <p class="task-description">{{ task.description }}</p>
   </div>
 
-  <div class="task-buttons" *ngFor="let task of taskArray">
+  <div class="task-buttons">
     <div class="task-toggler">
       <label class="switch">
         <input

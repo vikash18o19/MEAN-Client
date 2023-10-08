@@ -1,5 +1,9 @@
 # Client
 
+This is MEAN stack project for client side. It works with a backend server hosted on digital ocean.
+
+# Deployed Link:
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.3.
 
 ## Development server
