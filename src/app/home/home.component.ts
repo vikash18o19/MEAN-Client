@@ -15,5 +15,7 @@ export class HomeComponent {
     localStorage.removeItem('user');
     this.router.navigate(['/signin']);
   }
-  createTask() {}
+  createTask() {
+    this.router.navigate(['/tasks/create']);
+  }
 }

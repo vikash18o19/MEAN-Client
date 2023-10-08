@@ -8,6 +8,8 @@ import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
 import { FormsModule } from '@angular/forms';
 import { TasksComponent } from './tasks/tasks.component';
+import { CreateTaskComponent } from './create-task/create-task.component';
+import { EditTaskComponent } from './edit-task/edit-task.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +18,8 @@ import { TasksComponent } from './tasks/tasks.component';
     SigninComponent,
     SignupComponent,
     TasksComponent,
+    CreateTaskComponent,
+    EditTaskComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

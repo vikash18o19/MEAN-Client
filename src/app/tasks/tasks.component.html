@@ -1,5 +1,3 @@
-<!-- FILEPATH: /Users/Vikash/Desktop/Cashvisory Assignment/Client/src/app/tasks/tasks.component.html -->
-
 <!-- Loop through each task in taskArray -->
 <div class="task-container" *ngFor="let task of taskArray">
   <!-- Display task title and description -->
@@ -11,7 +9,11 @@
   <!-- Display a checked toggler to the right with default status of completed boolean -->
   <div class="task-toggler">
     <label class="switch">
-      <input type="checkbox" [checked]="task.completed" />
+      <input
+        type="checkbox"
+        [checked]="task.completed"
+        (change)="onToggle(task._id)"
+      />
       <span class="slider round"></span>
     </label>
   </div>
@@ -21,6 +23,6 @@
     <button (click)="onDelete(task._id)">Delete</button>
 
     <!-- Create a button for editing the task -->
-    <button (click)="onEdit(task._id)">Edit</button>
+    <button (click)="onEdit(task._id, task.completed)">Edit</button>
   </div>
 </div>

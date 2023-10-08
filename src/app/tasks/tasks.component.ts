@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TaskService } from '../task.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tasks',
@@ -9,7 +10,7 @@ import { TaskService } from '../task.service';
 export class TasksComponent {
   taskArray: any[] = [];
 
-  constructor(private taskService: TaskService) {}
+  constructor(private taskService: TaskService, private router: Router) {}
 
   ngOnInit() {
     this.taskService.getTasks().subscribe((response: any) => {
@@ -20,14 +21,34 @@ export class TasksComponent {
   }
 
   onDelete(id: string) {
-    // Delete task with given id
+    const confirmDelete = confirm('Are you sure you want to delete this task?');
+    if (confirmDelete) {
+      this.taskService.deleteTask(id).subscribe((response: any) => {
+        console.log(response);
+        if (response.status === 200) {
+          this.taskArray = this.taskArray.filter((task) => task._id !== id);
+          // location.reload(); // Reload the current route
+        } else {
+          alert('Error deleting task');
+        }
+      });
+    }
   }
 
-  onEdit(id: string) {
-    // Edit task with given id
+  onEdit(id: string, completed: boolean) {
+    // Redirect to EditTaskComponent with the id of the task to be edited
+    this.router.navigate(['/edit-task', id, completed]);
   }
 
   onToggle(id: string) {
-    // Toggle task with given id
+    const task = this.taskArray.find((task) => task._id === id);
+    if (task) {
+      task.completed = !task.completed;
+      this.taskService
+        .updateTask(id, task.title, task.description, task.completed)
+        .subscribe((response: any) => {
+          console.log(response);
+        });
+    }
   }
 }

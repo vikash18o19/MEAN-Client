@@ -34,12 +34,11 @@ export class TaskService {
     });
   }
 
-  createTask(
-    title: string,
-    description: string,
-    userId: string
-  ): Observable<any> {
+  createTask(title: string, description: string): Observable<any> {
     const token: string | null = localStorage.getItem('token');
+    const user: string | null = localStorage.getItem('user');
+    const userObj = JSON.parse(user!);
+    const userId = userObj._id;
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
       Authorization: `Bearer ${token}`,

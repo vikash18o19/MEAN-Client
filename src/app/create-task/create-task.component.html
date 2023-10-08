@@ -1,0 +1,17 @@
+<!-- FILEPATH: /Users/Vikash/Desktop/Cashvisory Assignment/Client/src/app/create-task/create-task.component.html -->
+
+<!-- Create Task Form -->
+<form (submit)="onSubmit($event)">
+  <label for="title">Title:</label>
+  <input type="text" id="title" name="title" [(ngModel)]="title" required />
+
+  <label for="description">Description:</label>
+  <textarea
+    id="description"
+    name="description"
+    [(ngModel)]="description"
+    required
+  ></textarea>
+
+  <button type="submit">Create Task</button>
+</form>
