@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApiService } from '../api.service'; // Replace with your API service import
 
@@ -7,11 +7,20 @@ import { ApiService } from '../api.service'; // Replace with your API service im
   templateUrl: './signin.component.html',
   styleUrls: ['./signin.component.css'],
 })
-export class SigninComponent {
+export class SigninComponent implements OnInit {
   email: string = '';
   password: string = '';
 
   constructor(private router: Router, private apiService: ApiService) {}
+
+  ngOnInit() {
+    // Check if token is present in local storage
+    const token = localStorage.getItem('token');
+    if (token) {
+      // Redirect to /home
+      this.router.navigate(['/home']);
+    }
+  }
 
   onSubmit(event: Event) {
     event.preventDefault();
@@ -37,6 +46,7 @@ export class SigninComponent {
       },
       (error: any) => {
         // Handle API error here
+        alert(error.error.message);
         console.error('API error:', error);
       }
     );

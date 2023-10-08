@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { NavigationExtras } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +14,10 @@ export class HomeComponent {
     localStorage.removeItem('token');
     localStorage.removeItem('refreshToken');
     localStorage.removeItem('user');
-    this.router.navigate(['/signin']);
+    const navigationExtras: NavigationExtras = {
+      skipLocationChange: true,
+    };
+    this.router.navigate(['/signin'], navigationExtras);
   }
   createTask() {
     this.router.navigate(['/tasks/create']);

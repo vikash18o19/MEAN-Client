@@ -1,28 +1,25 @@
-<!-- Loop through each task in taskArray -->
-<div class="task-container" *ngFor="let task of taskArray">
-  <!-- Display task title and description -->
-  <div>
+<div class="task-container" *ngIf="taskArray.length > 0">
+  <div class="task-content" *ngFor="let task of taskArray">
     <h3 class="task-title">{{ task.title }}</h3>
     <p class="task-description">{{ task.description }}</p>
   </div>
 
-  <!-- Display a checked toggler to the right with default status of completed boolean -->
-  <div class="task-toggler">
-    <label class="switch">
-      <input
-        type="checkbox"
-        [checked]="task.completed"
-        (change)="onToggle(task._id)"
-      />
-      <span class="slider round"></span>
-    </label>
-  </div>
-
-  <!-- Create a button for deleting the task -->
-  <div class="task-buttons">
+  <div class="task-buttons" *ngFor="let task of taskArray">
+    <div class="task-toggler">
+      <label class="switch">
+        <input
+          type="checkbox"
+          [checked]="task.completed"
+          (change)="onToggle(task._id)"
+        />
+        <span class="slider round"></span>
+      </label>
+    </div>
     <button class="delete" (click)="onDelete(task._id)">Delete</button>
 
-    <!-- Create a button for editing the task -->
     <button (click)="onEdit(task._id, task.completed)">Edit</button>
   </div>
+</div>
+<div *ngIf="taskArray.length === 0" class="no-task">
+  No tasks, Create to view
 </div>
