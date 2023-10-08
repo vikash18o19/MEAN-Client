@@ -1,6 +1,15 @@
-<div class="task-container" *ngFor="let task of taskArray">
+<div
+  class="task-container"
+  *ngFor="let task of taskArray"
+  [style.opacity]="task.completed ? '0.5' : '1'"
+>
   <div class="task-content">
-    <h3 class="task-title">{{ task.title }}</h3>
+    <h3
+      class="task-title"
+      [style.textDecoration]="task.completed ? 'line-through' : 'none'"
+    >
+      {{ task.title }}
+    </h3>
     <p class="task-description">{{ task.description }}</p>
   </div>
 
@@ -16,7 +25,6 @@
       </label>
     </div>
     <button class="delete" (click)="onDelete(task._id)">Delete</button>
-
     <button (click)="onEdit(task._id, task.completed)">Edit</button>
   </div>
 </div>

@@ -14,7 +14,7 @@
 .task-content{
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     align-items: flex-start;
     justify-content: space-around;
 }
@@ -43,7 +43,53 @@
     display: none;
 }
 
-.task-toggler .slider {
+.task-toggler label {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.task-toggler label input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.task-toggler label span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: background-color 0.3s;
+}
+
+.task-toggler label span:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.task-toggler input:checked + span {
+    background-color: lightcoral;
+}
+
+.task-toggler input:checked + span:before {
+    transform: translateX(26px);
+}
+    
+
+
+/* .task-toggler .slider {
     position: relative;
     display: inline-block;
     width: 50px;
@@ -70,7 +116,7 @@
 
 .task-toggler input[type="checkbox"]:checked + .slider:before {
     transform: translateX(25px);
-}
+} */
 
 /* Style the task buttons */
 .task-buttons {
