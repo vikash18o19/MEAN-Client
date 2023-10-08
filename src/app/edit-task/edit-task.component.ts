@@ -24,6 +24,7 @@ export class EditTaskComponent {
 
   onSubmit(event: Event) {
     event.preventDefault();
+    console.log(this.id, this.title, this.description, this.completed);
     this.taskService
       .updateTask(this.id, this.title, this.description, this.completed)
       .subscribe((response: any) => {

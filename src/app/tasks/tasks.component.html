@@ -20,7 +20,7 @@
 
   <!-- Create a button for deleting the task -->
   <div class="task-buttons">
-    <button (click)="onDelete(task._id)">Delete</button>
+    <button class="delete" (click)="onDelete(task._id)">Delete</button>
 
     <!-- Create a button for editing the task -->
     <button (click)="onEdit(task._id, task.completed)">Edit</button>

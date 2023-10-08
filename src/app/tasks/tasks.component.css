@@ -1,11 +1,13 @@
 /* Style the task container */
 .task-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     margin: 1rem;
     padding: 1rem;
-    border: 1px solid #ccc;
+    background-color: blanchedalmond;
+    /* border: 1px solid #ccc; */
     border-radius: 5px;
 }
 
@@ -55,7 +57,7 @@
 }
 
 .task-toggler input[type="checkbox"]:checked + .slider {
-    background-color: #2196f3;
+    background-color: lightcoral;
 }
 
 .task-toggler input[type="checkbox"]:checked + .slider:before {
@@ -73,15 +75,15 @@
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 5px;
-    background-color: #2196f3;
-    color: white;
+    background-color: #ccc;
+    color: black;
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 .task-buttons button:hover {
-    background-color: #0d8bf2;
+    background-color: lightcoral;
 }
 
 .task-buttons button:active {
@@ -90,11 +92,6 @@
 
 /* Media query for responsive design */
 @media screen and (min-width: 768px) {
-    .task-container {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
 
     .task-description {
         margin-right: 1rem;

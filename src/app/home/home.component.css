@@ -1,0 +1,50 @@
+/* Style for navbar */
+.navbar {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-left: 2rem;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+/* Style for logout button */
+.nav-item button {
+    margin-right: 10px;
+}
+
+/* Style for create task button */
+.fixed-bottom {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.btn-primary {
+    background-color: lightcoral;
+    width: 20rem;
+    margin: 0 auto; /* Centers the button horizontally */
+    display: block; /* Makes the button a block element */
+}
+
+.btn-primary:hover {
+    background-color: lightpink;
+    color: black;
+}
+
+
+.create-task-container{
+    width: 100vw;
+}
+
+.space-block{
+
+    height: 15vh;
+    width: 20vw;
+}
