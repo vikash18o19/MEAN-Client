@@ -29,4 +29,8 @@ export class CreateTaskComponent {
         this.router.navigate(['/home']);
       });
   }
+  onCancel(event: Event) {
+    event.preventDefault();
+    this.router.navigate(['/home']);
+  }
 }

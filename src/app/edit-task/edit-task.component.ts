@@ -39,4 +39,8 @@ export class EditTaskComponent {
         this.router.navigate(['/home']);
       });
   }
+  onCancel(event: Event) {
+    event.preventDefault();
+    this.router.navigate(['/home']);
+  }
 }

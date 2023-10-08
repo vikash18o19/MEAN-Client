@@ -9,6 +9,8 @@
     [(ngModel)]="description"
     required
   ></textarea>
-
-  <button type="submit">Update Task</button>
+  <div class="btns">
+    <button class="cancel-btn" (click)="onCancel($event)">Cancel</button>
+    <button type="submit">Update Task</button>
+  </div>
 </form>
