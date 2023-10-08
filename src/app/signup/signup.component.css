@@ -1,0 +1,59 @@
+.signin-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.signin-container h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.signup-option {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.signup-option p {
+    font-size: 1.2rem;
+}
+
+.signup-option a {
+    color: #007bff;
+    text-decoration: none;
+}

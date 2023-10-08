@@ -1,0 +1,68 @@
+/* FILEPATH: /Users/Vikash/Desktop/Cashvisory Assignment/Client/src/app/signin/signin.component.css */
+
+.signin-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #0069d9;
+}
+
+.signup-option {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.signup-option a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.signup-option a:hover {
+    text-decoration: underline;
+}
