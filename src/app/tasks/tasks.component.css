@@ -9,6 +9,8 @@
     background-color: blanchedalmond;
     /* border: 1px solid #ccc; */
     border-radius: 5px;
+}
+.task-container:first-child {
     margin-top: 5rem;
 }
 .task-content{
@@ -143,7 +145,7 @@
 }
 
 .task-buttons button:active {
-    background-color: #0a6ebd;
+    background-color: white;
 }
 .no-task{
     display: flex;
@@ -153,7 +155,6 @@
     margin: 1rem;
     padding: 1rem;
     background-color: blanchedalmond;
-    /* border: 1px solid #ccc; */
     border-radius: 5px;
     margin-top: 5rem;
 }
