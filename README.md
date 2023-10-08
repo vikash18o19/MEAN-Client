@@ -4,6 +4,12 @@ This is MEAN stack project for client side. It works with a backend server hoste
 
 # Deployed Link:
 
+https://mean-client-fawn.vercel.app/signin
+
+- sample user:
+  - email: vikash9cv@gmail.com
+  - password: 12345678
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.3.
 
 ## Development server
