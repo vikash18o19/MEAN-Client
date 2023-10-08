@@ -1,0 +1,102 @@
+/* Style the task container */
+.task-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style the task title */
+.task-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/* Style the task description */
+.task-description {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Style the task toggler */
+.task-toggler {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.task-toggler input[type="checkbox"] {
+    display: none;
+}
+
+.task-toggler .slider {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+    border-radius: 25px;
+    background-color: #ccc;
+    transition: background-color 0.3s;
+}
+
+.task-toggler .slider:before {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.task-toggler input[type="checkbox"]:checked + .slider {
+    background-color: #2196f3;
+}
+
+.task-toggler input[type="checkbox"]:checked + .slider:before {
+    transform: translateX(25px);
+}
+
+/* Style the task buttons */
+.task-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.task-buttons button {
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #2196f3;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.task-buttons button:hover {
+    background-color: #0d8bf2;
+}
+
+.task-buttons button:active {
+    background-color: #0a6ebd;
+}
+
+/* Media query for responsive design */
+@media screen and (min-width: 768px) {
+    .task-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .task-description {
+        margin-right: 1rem;
+    }
+}

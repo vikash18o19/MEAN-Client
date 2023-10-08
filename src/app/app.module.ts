@@ -7,9 +7,16 @@ import { HomeComponent } from './home/home.component';
 import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
 import { FormsModule } from '@angular/forms';
+import { TasksComponent } from './tasks/tasks.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, SigninComponent, SignupComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    SigninComponent,
+    SignupComponent,
+    TasksComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
