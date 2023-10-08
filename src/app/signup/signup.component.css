@@ -44,7 +44,7 @@ button {
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background-color: #007bff;
+    background-color: lightcoral;
     color: #fff;
     font-size: 16px;
     cursor: pointer;
@@ -52,7 +52,7 @@ button {
 }
 
 button:hover {
-    background-color: #0069d9;
+    background-color: orangered;
 }
 
 .signup-option {
@@ -61,7 +61,7 @@ button:hover {
 }
 
 .signup-option a {
-    color: #007bff;
+    color: orangered;
     text-decoration: none;
 }
 

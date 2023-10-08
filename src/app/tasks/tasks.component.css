@@ -1,4 +1,3 @@
-/* Style the task container */
 .task-container {
     display: flex;
     flex-direction: row;
@@ -90,37 +89,6 @@
 }
     
 
-
-/* .task-toggler .slider {
-    position: relative;
-    display: inline-block;
-    width: 50px;
-    height: 25px;
-    border-radius: 25px;
-    background-color: #ccc;
-    transition: background-color 0.3s;
-}
-
-.task-toggler .slider:before {
-    position: absolute;
-    content: "";
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background-color: white;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s;
-}
-
-.task-toggler input[type="checkbox"]:checked + .slider {
-    background-color: lightcoral;
-}
-
-.task-toggler input[type="checkbox"]:checked + .slider:before {
-    transform: translateX(25px);
-} */
-
-/* Style the task buttons */
 .task-buttons {
     display: flex;
     flex-direction: column;
@@ -159,7 +127,6 @@
     margin-top: 5rem;
 }
 
-/* Media query for responsive design */
 @media screen and (min-width: 768px) {
 
     .task-description {
